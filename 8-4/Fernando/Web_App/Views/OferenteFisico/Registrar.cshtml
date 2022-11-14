@@ -1,0 +1,122 @@
+﻿@using Web_App.AppCode.Helper.Language
+@using WebApp.Helpers
+
+@{
+    ViewBag.Title = "Registrar";
+    var viewName = "Registrar";
+}
+
+<style>
+    .form-check {
+        display: inline-block;
+    }
+
+    .card {
+        min-height: 82vh;
+    }
+
+    .form-group {
+        margin: 0 0;
+    }
+
+    .md-form {
+        margin: 16px 0;
+    }
+
+    .help-block.error {
+        margin-bottom: 5px;
+    }
+
+    .has-error label {
+        color: #ff3547 !important;
+    }
+
+    .has-error input.form-control {
+        border-bottom-color: #ff3547 !important;
+    }
+</style>
+
+<form class="needs-validation" novalidate id="form-oferete-fisico">
+    <div id="empresa">
+        <div class="form-row">
+            @Html.CtrlInputLabelModel(viewName, string.Empty, "tieneEmpresa", "tieneEmpresa", "checkbox", LanguageHelper.TieneEmpresa, false, false, string.Empty, string.Empty, "form-check form-group", "form-check-input")
+        </div>
+        <div id="form-empresa">
+
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="form-row">
+            <div class="custom-control custom-radio col-md-6">
+                @Html.CtrlInputLabelModel(viewName, "TipoIdentificacion", "cedula", "identificacion", "radio", LanguageHelper.Cedula, true, false, string.Empty, string.Empty, "form-check md-form", "form-check-input", string.Empty, LanguageHelper.Cedula)
+
+                @Html.CtrlInputLabelModel(viewName, "TipoIdentificacion", "pasaporte", "identificacion", "radio", LanguageHelper.Pasaporte, true, false, string.Empty, string.Empty, "form-check md-form", "form-check-input", string.Empty, LanguageHelper.Pasaporte)
+
+                @Html.CtrlInputLabelModel(viewName, "TipoIdentificacion", "residente", "identificacion", "radio", LanguageHelper.Residente, true, false, string.Empty, string.Empty, "form-check md-form", "form-check-input", string.Empty, LanguageHelper.Residente)
+            </div>
+
+        </div>
+        <div class="form-row">
+
+            @Html.CtrlInputFormModel(viewName, "Identificacion", "id", "6", "3", "id", LanguageHelper.Identificacion, "form-control", "text", false, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato, string.Empty, true, "disabled")
+
+            @Html.CtrlInputFormModel(viewName, "Nombre", "nombre", "3", "3", "nombre", LanguageHelper.Nombre, "form-control", "text", false)
+
+            @Html.CtrlInputFormModel(viewName, "PrimerApellido", "primerApellido", "3", "3", "primer-apellido", LanguageHelper.PrimerApellido, "form-control", "text", true, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato)
+        </div>
+        <div class="form-row">
+            @Html.CtrlInputFormModel(viewName, "SegundoApellido", "segundoApellido", "3", "3", "segundo-apellido", LanguageHelper.SegundoApellido, "form-control", "text", false)
+
+            @Html.CtrlDropDown("drpProvincia", "Provincia", "drp-provincia", LanguageHelper.Provincia, false, "3", LanguageHelper.Buscar, string.Empty, LanguageHelper.SeleccioneUnaOpcion, "LST_PROVINCIA")
+
+            @Html.CtrlDropDown("drpCanton", "Canton", "drp-canton", LanguageHelper.Canton, true, "3", LanguageHelper.Buscar, "disabled", LanguageHelper.SeleccioneUnaOpcion)
+
+            @Html.CtrlDropDown("drpDistrito", "Distrito", "drp-distrito", LanguageHelper.Distrito, true, "3", LanguageHelper.Buscar, "disabled", LanguageHelper.SeleccioneUnaOpcion)
+        </div>
+        <div class="form-row">
+
+            @Html.CtrlInputFormModel(viewName, "Direccion", "direccion", "7", "3", "id", LanguageHelper.DireccionExacta, "form-control", "text", true, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato)
+
+            @Html.CtrlDropDown("drpPais", "PaisNacimiento", "drp-pais", LanguageHelper.PaisDeNacimiento, false, "3", LanguageHelper.Buscar, string.Empty, LanguageHelper.SeleccioneUnaOpcion, "LST_PAISES")
+
+            @Html.CtrlDropDown("drpMembresia", "TipoMembresia", "drp-membresia", LanguageHelper.Membresia, false, "2", LanguageHelper.Buscar, string.Empty, LanguageHelper.SeleccioneUnaOpcion, "LST_MEMBRESIA")
+        </div>
+
+        <div class="form-row">
+            @Html.CtrlInputLabelModel(viewName, "FechaNacimeinto", "fecha-nacimiento", "fechaNacimiento", "text", LanguageHelper.FechaNacimiento, true, true, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato, "col-md-3 mb-3 md-form", "form-control datepicker", LanguageHelper.FechaNacimiento)
+
+            @Html.CtrlInputFormModel(viewName, "Telefono", "telefono", "3", "3", "telefono", LanguageHelper.Telefono, "form-control", "text", true, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato, dataFormat: "(***) ****-****", dataMask: "(###) ####-####")
+
+            @Html.CtrlInputFormModel(viewName, "Email", "email", "6", "3", "email", LanguageHelper.CorreoElectronico, "form-control", "email", true, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato)
+        </div>
+
+        <div class="form-row">
+            @Html.CtrlDropDown("drpGenero", "Genero", "drp-genero", LanguageHelper.Genero, false, "4", LanguageHelper.Buscar, string.Empty, LanguageHelper.SeleccioneUnaOpcion, "LST_GENERO")
+
+            @Html.CtrlDropDown("drpMoneda", "Moneda", "drp-moneda", LanguageHelper.MonedaParaUsarEnElSistema, false, "4", LanguageHelper.Buscar, string.Empty, LanguageHelper.SeleccioneUnaOpcion, "LST_MONEDA")
+
+            @Html.CtrlDropDown("drpLenguaje", "Lenguaje", "drp-lenguaje", LanguageHelper.LenguajeDelSistema, false, "4", LanguageHelper.Buscar, string.Empty, LanguageHelper.SeleccioneUnaOpcion, "LST_LENGUAJE")
+        </div>
+
+        <div class="form-row">
+            <div id="floatingPanel">
+                <button id="borrar-marker" type=button class="material orange">Borrar Marca</button>
+            </div>
+            <div id="map"></div>
+        </div>
+        <button id="oferente-registar" class="btn btn-primary btn-sm" type="submit">Submit form</button>
+    </div>
+</form>
+
+<script src="~/Scripts/underscore-min.js"></script>
+<script src="~/Scripts/moment.min.js"></script>
+<script src="~/Scripts/validate.min.js"></script>
+
+<script src="~/Scripts/Views/Form/SelectLocalizacion.js"></script>
+<script src="~/Scripts/Views/OfrerenteFisico/Registrar/Registrar.js"></script>
+<script src="~/Scripts/Views/OfrerenteFisico/Registrar/validacion.js"></script>
+<script src="~/Scripts/Services/Mask/mask.js"></script>
+<script src="~/Scripts/Services/Map/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKXA3_YJlVwwt1lx60eO0ljRVUKQO3fNY"
+        async defer></script>

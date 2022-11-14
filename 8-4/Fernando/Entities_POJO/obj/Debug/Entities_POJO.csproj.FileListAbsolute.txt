@@ -1,0 +1,5 @@
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\Entities_POJO\bin\Debug\Entities_POJO.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\Entities_POJO\bin\Debug\Entities_POJO.pdb
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\Entities_POJO\obj\Debug\Entities_POJO.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\Entities_POJO\obj\Debug\Entities_POJO.pdb
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\Entities_POJO\obj\Debug\Entities_POJO.csprojAssemblyReference.cache

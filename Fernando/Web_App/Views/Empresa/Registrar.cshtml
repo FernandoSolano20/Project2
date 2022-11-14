@@ -1,0 +1,71 @@
+﻿@using Web_App.AppCode.Helper.Language
+@using WebApp.Helpers
+
+@{
+    ViewBag.Title = "Registrar";
+    var viewName = "Registrar";
+}
+
+<div class="form-row">
+    @Html.CtrlInputFormModel(viewName, "Cedula", "cedulaJuridica", "6", "3", "cedula-juridica", LanguageHelper.CedulaJuridica, "form-control", "text", true, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato)
+
+    @Html.CtrlInputFormModel(viewName, "RazonSocial", "razonSocial", "3", "3", "razon-social", LanguageHelper.RazonSocial, "form-control", "text", true, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato)
+
+    @Html.CtrlInputFormModel(viewName, "NombreComercial", "nombreComercial", "3", "3", "nombre-comercial", LanguageHelper.NombreComercial, "form-control", "text", true, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato)
+</div>
+<div class="form-row">
+
+    @Html.CtrlDropDown("drpProvinciaEmpresa", "Provincia", "drp-provincia-empresa", LanguageHelper.Provincia, false, "4", LanguageHelper.Buscar, string.Empty, LanguageHelper.SeleccioneUnaOpcion, "LST_PROVINCIA")
+
+    @Html.CtrlDropDown("drpCantonEmpresa", "Canton", "drp-canton-empresa", LanguageHelper.Canton, true, "4", LanguageHelper.Buscar, "disabled", LanguageHelper.SeleccioneUnaOpcion)
+
+    @Html.CtrlDropDown("drpDistritoEmpresa", "Distrito", "drp-distrito-empresa", LanguageHelper.Distrito, true, "4", LanguageHelper.Buscar, "disabled", LanguageHelper.SeleccioneUnaOpcion)
+</div>
+<div class="form-row">
+
+    @Html.CtrlInputFormModel(viewName, "Direccion", "direccionEmpresa", "6", "3", "direccionEmpresa", LanguageHelper.DireccionExacta, "form-control", "text", true, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato)
+
+    @Html.CtrlInputLabelModel(viewName, "FechaCreacion", "fecha-creacion", "fechaCreacion", "text", LanguageHelper.FechaCreacion, true, true, LanguageHelper.CumpleConElFormato, LanguageHelper.NoCumpleConElFormato, "col-md-3 mb-3 md-form", "form-control datepicker", LanguageHelper.FechaCreacion,string.Empty,"active")
+
+</div>
+
+<div class="form-row">
+    <div id="floatingPanel">
+        <button id="borrar-marker-empresa" type=button class="material orange">Borrar Marca</button>
+    </div>
+    <div id="map"></div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        var provincia = document.getElementById("drp-provincia-empresa");
+        var canton = document.querySelector("[data-container-drp-canton-empresa]");
+        var distrito = document.querySelector("[data-container-drp-distrito-empresa]");
+        selectsLocalizacion(provincia, canton, distrito, true);
+
+        $('#drp-provincia-empresa, #drp-canton-empresa, #drp-distrito-empresa').materialSelect({
+            validate: true,
+            labels: {
+                validFeedback: 'Correct choice',
+                invalidFeedback: 'Wrong choice'
+            }
+        });
+        $('#fecha-creacion').pickadate({
+            format: 'mm-dd-yyyy',
+            max: new Date()
+        });
+        function initOferenteMap(timeToLoad) {
+            setTimeout(function () {
+                timeToLoad--;
+                if (typeof google !== "undefined") {
+                    initMap(document.querySelector("#form-empresa #map"),document.getElementById("borrar-marker-empresa"), "Empresa");
+                } else {
+                    initOferenteMap(timeToLoad);
+                }
+            },100);
+        }
+
+        initOferenteMap(100);
+    });
+</script>

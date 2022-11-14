@@ -1,0 +1,13 @@
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\bin\Debug\CoreAPI.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\bin\Debug\CoreAPI.pdb
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\bin\Debug\DataAccess.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\bin\Debug\Entities_POJO.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\bin\Debug\Excepciones.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\bin\Debug\DataAccess.pdb
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\bin\Debug\Entities_POJO.pdb
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\bin\Debug\Excepciones.pdb
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\obj\Debug\CoreAPI.csprojAssemblyReference.cache
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\obj\Debug\CoreAPI.csproj.CopyComplete
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\obj\Debug\CoreAPI.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\CoreAPI\obj\Debug\CoreAPI.pdb

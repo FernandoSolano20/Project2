@@ -1,0 +1,45 @@
+﻿@using WebApp.Helpers;
+@using Web_App.AppCode.Helper.Language;
+<script src="~/Scripts/Views/Rol/vRol.js"></script>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--- Welcome Section -->
+<div class="container-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class=" brand-font pt-4">@LanguageHelper.Rol</h1>
+        </div>
+        <hr>
+        <div class="col-12">
+            <p class="lead"></p>
+        </div>
+    </div>
+</div>
+@{
+    string columnsTitle = LanguageHelper.ID + "," + LanguageHelper.Nombre + "," + LanguageHelper.Descripcion + "," + LanguageHelper.Acciones;
+}
+@Html.CtrlTable(viewName: "vRol", id: "tblRol", title: LanguageHelper.Rol,
+    columnsTitle: columnsTitle, ColumnsDataName: "Id,Nombre,Descripcion", onSelectFunction: "BindFields", colorHeader: "red", hasButton: true, buttonId: "btnCreate",
+    buttonType: "success", buttonLabel: LanguageHelper.Crear, buttonFunction: "", buttonToggle: "modal", buttonTarget: "createModal")
+
+@Html.CtrlModalForm(viewName: "vRol", id: "editModal", modalFormId: "editModalForm", title: LanguageHelper.Editar, text: LanguageHelper.IngresarTextoEditar,
+    inputColumnDataNames: "Id,Nombre,Descripcion", inputIds: "txtEditId,txtEditNombre,txtEditDescripcion", inputTypes: "text,text,text", inputClasses: "disabled,,",
+    inputPlaceholders: "~,~,~", inputValues: ",,",
+    inputLabels: LanguageHelper.ID + "," + LanguageHelper.Nombre + "," + LanguageHelper.Descripcion, btnActionId: "btnSave", btnActionType: "success",
+    btnActionText: LanguageHelper.Guardar,
+    btnActionFunction: "Update", btnCancelId: "btnEditCancel", btnCancelType: "light", btnCancelText: LanguageHelper.Cancelar, btnCancelFunction: "CleanUpdate")
+
+
+@Html.CtrlModalForm(viewName: "vRol", id: "createModal", modalFormId: "createModalForm", title: LanguageHelper.Crear, text: LanguageHelper.IngresarTextoCrear,
+    inputColumnDataNames: "Nombre,Descripcion", inputIds: "txtCreateNombre,txtCreateDescripcion", inputTypes: "text,text",inputClasses: ",,",
+    inputPlaceholders: ",,", inputValues: ",,",
+    inputLabels: LanguageHelper.Nombre + "," + LanguageHelper.Descripcion, btnActionId: "btnInsert",btnActionType: "success", 
+    btnActionText: LanguageHelper.Guardar,
+    btnActionFunction: "Create", btnCancelId: "btnInsertCancel", btnCancelType: "light",btnCancelText: LanguageHelper.Cancelar, btnCancelFunction: "CleanInsert")
+
+
+@Html.CtrlModalMessage(viewName: "vRol", id: "deleteModal", modalFormId: "deleteModalMessage", title: LanguageHelper.Eliminar, text: LanguageHelper.ConfirmacionEliminar,
+    btnActionId: "btnDelete", btnActionType: "danger", btnActionText: LanguageHelper.Eliminar, btnActionFunction: "Delete", btnCancelId: "btnDeleteCancel",
+    btnCancelType: "light", btnCancelText: LanguageHelper.Cancelar, btnCancelFunction: "Cancel", spanId: "spanDeleteAttribute", spanClasses: "font-weight-bold",
+    spanColumnDataName: "Nombre")

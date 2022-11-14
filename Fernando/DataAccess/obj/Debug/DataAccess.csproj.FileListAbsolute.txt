@@ -1,0 +1,8 @@
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\DataAccess\bin\Debug\Entities_POJO.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\DataAccess\bin\Debug\Entities_POJO.pdb
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\fersolano\Desktop\Proyecto2\Web_App\Fernando\DataAccess\obj\Debug\DataAccess.pdb

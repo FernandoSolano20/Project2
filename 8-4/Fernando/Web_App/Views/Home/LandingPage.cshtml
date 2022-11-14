@@ -1,0 +1,393 @@
+﻿@using Web_App.AppCode.Helper.Language;
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MASTER</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="~/Content/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="~/Content/landing.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+
+            <!-- Brand -->
+
+            @Html.ActionLink("MASTER", "LandingPage", "Home", new { @class = "navbar-brand brand-font strong" })
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="@Url.Action("LandingPage", "Home")" class="nav-link">
+                            @LanguageHelper.Inicio
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("LandingPage", "Home")">@LanguageHelper.Conocenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("LandingPage", "Home")">@LanguageHelper.Productos</a>
+                    </li>
+                </ul>
+
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a href="@Url.Action("InicioSesion", "Home")" class="nav-link border border-light rounded btn-white-hover">
+                            <i class="fas fa-sign-in-alt mr-2"></i>@LanguageHelper.InicioSesion
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <!--Carousel Wrapper-->
+    <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+            <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+        </ol>
+        <!--/.Indicators-->
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+            <!--First slide-->
+            <div class="carousel-item active">
+                <div class="view"
+                     style="background-image: url('../../Content/img/wood1.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+                    <!-- Mask & flexbox options-->
+                    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+                        <!-- Content -->
+                        <div class="text-center white-text mx-5 wow fadeIn">
+                            <h1 class="brand-font display-4">
+                                <strong>@LanguageHelper.TrabajeConExpertos</strong>
+                            </h1>
+
+                            <p class="lead">
+                                <strong>@LanguageHelper.EncontrarMejoresProfesionales</strong>
+                            </p>
+
+                            <a href="@Url.Action("LandingPage", "Home")" class="btn btn-outline-white btn-lg">
+                                @LanguageHelper.ComienceAConstruir
+                                <i class="fas fa-tools ml-2"></i>
+                            </a>
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <!-- Mask & flexbox options-->
+
+                </div>
+            </div>
+            <!--/First slide-->
+            <!--Second slide-->
+            <div class="carousel-item">
+                <div class="view"
+                     style="background-image: url('../../Content/img/drawing.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+                    <!-- Mask & flexbox options-->
+                    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+                        <!-- Content -->
+                        <div class="text-center white-text mx-5 wow fadeIn">
+                            <h1 class="brand-font display-4">
+                                <strong>@LanguageHelper.TrabajeConExpertos</strong>
+                            </h1>
+
+                            <p class="lead">
+                                <strong>@LanguageHelper.EncontrarMejoresProfesionales</strong>
+                            </p>
+
+                            <a href="@Url.Action("LandingPage", "Home")" class="btn btn-outline-white btn-lg btn-white-hover">
+                                @LanguageHelper.ComienceADisenar
+                                <i class="fas fa-pencil-alt ml-2"></i>
+                            </a>
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <!-- Mask & flexbox options-->
+
+                </div>
+            </div>
+            <!--/Second slide-->
+            <!--Third slide-->
+            <div class="carousel-item">
+                <div class="view"
+                     style="background-image: url('../../Content/img/student.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+                    <!-- Mask & flexbox options-->
+                    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+                        <!-- Content -->
+                        <div class="text-center white-text mx-5 wow fadeIn">
+                            <h1 class="brand-font display-4">
+                                <strong>@LanguageHelper.TrabajeConExpertos</strong>
+                            </h1>
+
+                            <p class="lead">
+                                <strong>@LanguageHelper.EncontrarMejoresProfesionales</strong>
+                            </p>
+
+                            <a href="@Url.Action("LandingPage", "Home")" class="btn btn-outline-white btn-lg btn-white-hover">
+                                @LanguageHelper.ComienceAAprender
+                                <i class="fas fa-graduation-cap ml-2"></i>
+                            </a>
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <!-- Mask & flexbox options-->
+
+                </div>
+            </div>
+            <!--/Third slide-->
+
+        </div>
+        <!--/.Slides-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+    <!--Main layout-->
+    <main>
+        <div class="container">
+
+            <!--Section: Main info-->
+            <section class="mt-5 wow fadeIn">
+
+
+                <!--- Welcome Section -->
+                <div class="container-fluid padding">
+                    <div class="row welcome text-center">
+                        <div class="col-12">
+                            <h1 class="display-4 brand-font">@LanguageHelper.ConozcaMaster</h1>
+                        </div>
+
+                        <hr>
+
+                        <div class="col-12">
+                            <p class="lead">@LanguageHelper.DescripcionMasterLanding</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--- Three Column Section -->
+                <div class="container-fluid padding p-3">
+                    <div class="row text-center padding">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <!-- Start using fontawesome icons -->
+                            <i class="fas fa-cogs"></i>
+                            <h3>@LanguageHelper.Expertos</h3>
+                            <p>@LanguageHelper.ExpertosDescripcion</p>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <!-- Start using fontawesome icons -->
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>@LanguageHelper.Seguridad</h3>
+                            <p>@LanguageHelper.SeguridadDescripcion</p>
+                        </div>
+
+                        <div class="col-sm-12 col-md-4">
+                            <!-- Start using fontawesome icons -->
+                            <i class="fas fa-check"></i>
+                            <h3>@LanguageHelper.Confianza</h3>
+                            <p>@LanguageHelper.ConfianzaDescripcion</p>
+                        </div>
+                    </div>
+                    <hr class="my-5">
+                </div>
+
+            </section>
+            <!--Section: Main info-->
+            <!--Section: Main info-->
+            <section class="mt-3 wow fadeIn">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4">
+
+                        <img src="~/Content/img/cook.jpg" class="img-fluid z-depth-1-half" alt="">
+
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4 pt-5">
+
+                        <!-- Main heading -->
+                        <h3 class="h3 mb-3 brand-font text-uppercase">@LanguageHelper.ContacteALosMejores</h3>
+                        <p>@LanguageHelper.ComenzarATrabajarEnSusProyectos
+
+                        <p>@LanguageHelper.RegistreseSinNingunCostoAdicional</p>
+
+                        <a href="@Url.Action("LandingPage", "Home")" class="btn btn-lg unique-color-dark white-text">
+                            @LanguageHelper.RegistreseAhora
+                            <i class="fas fa-download ml-1"></i>
+                        </a>
+                        <!-- Main heading -->
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </section>
+            <!--Section: Main info-->
+            <hr class="my-5">
+
+            <!--Section: Main features & Quick Start-->
+            <section>
+
+                <h3 class="h2 text-center mb-5 brand-font">@LanguageHelper.SeaUnMaster</h3>
+
+                <!--Grid row-->
+                <div class="row wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12 px-4">
+
+                        <!--First row-->
+                        <div class="row">
+                            <div class="col-1 mr-3">
+                                <i class="fas fa-tools fa-2x indigo-text"></i>
+                            </div>
+                            <div class="col-10">
+                                <h5 class="feature-title">@LanguageHelper.PromocioneSuTrabajo</h5>
+                                <p>@LanguageHelper.PromocioneSuTrabajoDescripcion</p>
+                            </div>
+                        </div>
+                        <!--/First row-->
+
+                        <div style="height:30px"></div>
+
+                        <!--Second row-->
+                        <div class="row">
+                            <div class="col-1 mr-3">
+                                <i class="fas fa-money-bill-wave fa-2x blue-text"></i>
+                            </div>
+                            <div class="col-10">
+                                <h5 class="feature-title">@LanguageHelper.RecibaSusGanancias</h5>
+                                <p class="grey-text">@LanguageHelper.RecibaSusGananciasDescripcion</p>
+                            </div>
+                        </div>
+                        <!--/Second row-->
+
+                        <div style="height:30px"></div>
+
+                        <!--Third row-->
+                        <div class="row">
+                            <div class="col-1 mr-3">
+                                <i class="fas fa-calendar-check fa-2x cyan-text"></i>
+                            </div>
+                            <div class="col-10">
+                                <h5 class="feature-title">@LanguageHelper.InscripcionAnual</h5>
+                                <p class="grey-text">@LanguageHelper.InscripcionAnualDescripcion</p>
+                            </div>
+                        </div>
+                        <!--/Third row-->
+
+                    </div>
+                    <!--/Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="~/Content/img/woman.jpg" class="embed-responsive-item" alt="">
+                        </div>
+                    </div>
+                    <!--/Grid column-->
+
+                </div>
+                <!--/Grid row-->
+
+            </section>
+            <!--Section: Main features & Quick Start-->
+
+            <hr class="my-5">
+
+
+        </div>
+    </main>
+    <!--Main layout-->
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+        <!--Call to action-->
+        <div class="pt-4">
+            <a class="btn btn-outline-white" href="@Url.Action("InicioSesion", "Home")" role="button">
+                @LanguageHelper.InicioSesion
+                <i class="fas fa-download ml-2"></i>
+            </a>
+        </div>
+        <!--/.Call to action-->
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © @LanguageHelper.ElaboradoPor:
+            <a href="https://dev.azure.com/grupobejuco/" target="_blank">Grupo Bejuco 2020</a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="~/Scripts/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
+
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+
+    </script>
+</body>
+
+</html>
+

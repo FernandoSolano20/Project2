@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bye" xml:space="preserve">
+    <value>Bye</value>
+  </data>
+  <data name="Hola" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+  <data name="Editar" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Cancelar" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Guardar" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Nombre" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Descripcion" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Estado" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="IngresarTextoEditar" xml:space="preserve">
+    <value>Enter the data to edit</value>
+  </data>
+  <data name="Crear" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="TiposTrabajo" xml:space="preserve">
+    <value>Job Types</value>
+  </data>
+  <data name="IngresarTextoCrear" xml:space="preserve">
+    <value>Enter the data to insert</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Saludo" xml:space="preserve">
+    <value>Greetings</value>
+  </data>
+  <data name="Eliminar" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ConfirmacionEliminar" xml:space="preserve">
+    <value>Please confirm you want to delete </value>
+  </data>
+  <data name="ConfirmacionEstado" xml:space="preserve">
+    <value>Please confirm you want to change the current state component</value>
+  </data>
+  <data name="ActivarDesactivar" xml:space="preserve">
+    <value>Active/Deactivate</value>
+  </data>
+  <data name="Acciones" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Cedula" xml:space="preserve">
+    <value>Identification card</value>
+  </data>
+  <data name="Pasaporte" xml:space="preserve">
+    <value>Passport</value>
+  </data>
+  <data name="Residente" xml:space="preserve">
+    <value>Resident</value>
+  </data>
+  <data name="Identificacion" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="NoCumpleConElFormato" xml:space="preserve">
+    <value>Does not comply with the format</value>
+  </data>
+  <data name="CumpleConElFormato" xml:space="preserve">
+    <value>Complies with the format</value>
+  </data>
+  <data name="PrimerApellido" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="SegundoApellido" xml:space="preserve">
+    <value>Second last name</value>
+  </data>
+  <data name="Buscar" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SeleccioneUnaOpcion" xml:space="preserve">
+    <value>Select an option</value>
+  </data>
+  <data name="Provincia" xml:space="preserve">
+    <value>Province</value>
+  </data>
+  <data name="Canton" xml:space="preserve">
+    <value>Canton</value>
+  </data>
+  <data name="Distrito" xml:space="preserve">
+    <value>District</value>
+  </data>
+  <data name="DireccionExacta" xml:space="preserve">
+    <value>Exact direction</value>
+  </data>
+  <data name="PaisDeNacimiento" xml:space="preserve">
+    <value>Country of birth</value>
+  </data>
+  <data name="FechaNacimiento" xml:space="preserve">
+    <value>Birth date</value>
+  </data>
+  <data name="Telefono" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="CorreoElectronico" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Genero" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="MonedaParaUsarEnElSistema" xml:space="preserve">
+    <value>Currency to use in the system</value>
+  </data>
+  <data name="LenguajeDelSistema" xml:space="preserve">
+    <value>System language</value>
+  </data>
+  <data name="TieneEmpresa" xml:space="preserve">
+    <value>Do you have a company?</value>
+  </data>
+  <data name="CedulaJuridica" xml:space="preserve">
+    <value>Legal ID</value>
+  </data>
+  <data name="RazonSocial" xml:space="preserve">
+    <value>Business name</value>
+  </data>
+  <data name="NombreComercial" xml:space="preserve">
+    <value>Tradename</value>
+  </data>
+  <data name="FechaCreacion" xml:space="preserve">
+    <value>Creation date</value>
+  </data>
+  <data name="Tipo" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Membresia" xml:space="preserve">
+    <value>Membership</value>
+  </data>
+  <data name="MantenimientoTiposTrabajoDescripcion" xml:space="preserve">
+    <value>Maintenance view for job types in the platform</value>
+  </data>
+  <data name="Inicio" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Conocenos" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="Productos" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="InicioSesion" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="TrabajeConExpertos" xml:space="preserve">
+    <value>Work with the experts</value>
+  </data>
+  <data name="EncontrarMejoresProfesionales" xml:space="preserve">
+    <value>In Master you will find the best professionals in all areas</value>
+  </data>
+  <data name="ComienceAConstruir" xml:space="preserve">
+    <value>Start building</value>
+  </data>
+  <data name="ComienceADisenar" xml:space="preserve">
+    <value>Start designing</value>
+  </data>
+  <data name="ComienceAAprender" xml:space="preserve">
+    <value>Start learning</value>
+  </data>
+  <data name="ConozcaMaster" xml:space="preserve">
+    <value>Meet MASTER</value>
+  </data>
+  <data name="DescripcionMasterLanding" xml:space="preserve">
+    <value>MASTER is a platform that facilitates the process of contracting professional services in Costa Rica. Through a supply-demand system, our clients will be able to contact expert personnel in any area they need.</value>
+  </data>
+  <data name="Expertos" xml:space="preserve">
+    <value>Experts</value>
+  </data>
+  <data name="ExpertosDescripcion" xml:space="preserve">
+    <value>Find the best professionals in the area you need at any time.</value>
+  </data>
+  <data name="Seguridad" xml:space="preserve">
+    <value>Safety</value>
+  </data>
+  <data name="SeguridadDescripcion" xml:space="preserve">
+    <value>Select the company that best suits your budget and needs.</value>
+  </data>
+  <data name="Confianza" xml:space="preserve">
+    <value>Trustworthy</value>
+  </data>
+  <data name="ConfianzaDescripcion" xml:space="preserve">
+    <value>Select the company that best suits your budget and need.</value>
+  </data>
+  <data name="ComenzarATrabajarEnSusProyectos" xml:space="preserve">
+    <value>Let all of our experts start working on your most ambitious projects.</value>
+  </data>
+  <data name="RegistreseSinNingunCostoAdicional" xml:space="preserve">
+    <value>At no additional cost register now and start dreaming big.</value>
+  </data>
+  <data name="RegistreseAhora" xml:space="preserve">
+    <value>Register now</value>
+  </data>
+  <data name="SeaUnMaster" xml:space="preserve">
+    <value>Become a MASTER</value>
+  </data>
+  <data name="PromocioneSuTrabajo" xml:space="preserve">
+    <value>Promote your work</value>
+  </data>
+  <data name="PromocioneSuTrabajoDescripcion" xml:space="preserve">
+    <value>In MASTER you will be able to contact hundreds of users and share all their incredible work</value>
+  </data>
+  <data name="RecibaSusGanancias" xml:space="preserve">
+    <value>Receive your winnings instantly</value>
+  </data>
+  <data name="RecibaSusGananciasDescripcion" xml:space="preserve">
+    <value>Choose when to receive the benefits you have generated thanks to working on the platform</value>
+  </data>
+  <data name="InscripcionAnual" xml:space="preserve">
+    <value>Annual enrollment</value>
+  </data>
+  <data name="InscripcionAnualDescripcion" xml:space="preserve">
+    <value>Renew your subscription to the platform every year and forget about long and tedious processes</value>
+  </data>
+  <data name="ElaboradoPor" xml:space="preserve">
+    <value>Produced by</value>
+  </data>
+  <data name="ContacteALosMejores" xml:space="preserve">
+    <value>Contact the best</value>
+  </data>
+  <data name="VerboHTTP" xml:space="preserve">
+    <value>HTTP Verb</value>
+  </data>
+  <data name="Accion" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Identificador" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+  <data name="Fecha" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Entidad" xml:space="preserve">
+    <value>Entity</value>
+  </data>
+  <data name="IDUsuario" xml:space="preserve">
+    <value>User ID</value>
+  </data>
+  <data name="Bitacora" xml:space="preserve">
+    <value>Logbook</value>
+  </data>
+  <data name="BitacoraDescripcion" xml:space="preserve">
+    <value>View with data entered in platform logbook</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="IDPropietario" xml:space="preserve">
+    <value>ID Owner</value>
+  </data>
+  <data name="Documentos" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="DocumentosDescripcion" xml:space="preserve">
+    <value>Manage your company documents</value>
+  </data>
+  <data name="Titulo" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Membresias" xml:space="preserve">
+    <value>Memberships</value>
+  </data>
+  <data name="MembresiasDescripcion" xml:space="preserve">
+    <value>Start growing with a MASTER membership</value>
+  </data>
+  <data name="MembresiaEstandar" xml:space="preserve">
+    <value>Standard Membership</value>
+  </data>
+  <data name="MembresiaPremium" xml:space="preserve">
+    <value>Premium Membership</value>
+  </data>
+  <data name="MembresiaEstandarDescripcion" xml:space="preserve">
+    <value>Multiply your income with our basic MASTER membership. With this membership you will be able to propel your business thanks to all the new jobs available from our clients.</value>
+  </data>
+  <data name="MembresiaPremiumDescripcion" xml:space="preserve">
+    <value>Start your journey as a featured MASTER with Premium Membership. All your offers will be shown as Featured and you can improve your competitiveness by seeing offers made by other companies to the client.</value>
+  </data>
+  <data name="ComprarAhora" xml:space="preserve">
+    <value>Buy now</value>
+  </data>
+  <data name="ConvertirseEnMaster" xml:space="preserve">
+    <value>It is time to become a MASTER.</value>
+  </data>
+  <data name="ImpulsarNegocio" xml:space="preserve">
+    <value>Boost your business exponentially right now for just</value>
+  </data>
+  <data name="ExtenderMembresia" xml:space="preserve">
+    <value>Extend your membership</value>
+  </data>
+  <data name="MejorarMembresia" xml:space="preserve">
+    <value>Take your business to another level for just</value>
+  </data>
+  <data name="AdquirirMembresia" xml:space="preserve">
+    <value>Acquire Standard Membership</value>
+  </data>
+  <data name="Rol" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="Rechazar" xml:space="preserve">
+    <value>Refuse</value>
+  </data>
+  <data name="Aceptar" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="PorcentajeComisionPorTrabajo" xml:space="preserve">
+    <value>Commission rate for work</value>
+  </data>
+</root>

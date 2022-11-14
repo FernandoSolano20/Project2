@@ -1,0 +1,158 @@
+﻿
+@using WebApp.Helpers;
+@using Web_App.AppCode.Helper.Language;
+
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script src="~/Scripts/Views/Membresia/vMembresia.js"></script>
+<script src="~/Scripts/Services/PayPal/PayPalService.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js" type="text/javascript"></script>
+<script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+
+@{
+    Layout = null;
+}
+
+<!--- Welcome Section -->
+<div class="container-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class="brand-font pt-4">@LanguageHelper.Membresias</h1>
+        </div>
+
+        <hr>
+
+        <div class="col-12 pb-3">
+            <p class="lead">@LanguageHelper.MembresiasDescripcion</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card deck -->
+<div class="card-deck">
+
+    <!-- Card -->
+    <div class="card mb-4">
+
+        <!--Card image-->
+        <div class="view overlay">
+            <img class="card-img-top" src="~/Content/img/membership1.jpg"
+                 alt="Card image cap">
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+
+            <!--Title-->
+            <h4 class="card-title">@LanguageHelper.MembresiaEstandar</h4>
+            <!--Text-->
+            <p class="card-text">
+                @LanguageHelper.MembresiaEstandarDescripcion
+            </p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-light-green btn-md" data-toggle="modal" data-target="#membresiaEstandarModal" id="btnAdquirirEstandar">@LanguageHelper.ComprarAhora</button>
+
+        </div>
+
+    </div>
+    <!-- Card -->
+    <div class="card mb-4">
+
+        <!--Card image-->
+        <div class="view overlay">
+            <img class="card-img-top" src="~/Content/img/membership2.jpg"
+                 alt="Card image cap">
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+
+            <!--Title-->
+            <h4 class="card-title">@LanguageHelper.MembresiaPremium</h4>
+            <!--Text-->
+            <p class="card-text">
+                @LanguageHelper.MembresiaPremiumDescripcion
+            </p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-light-green btn-md">@LanguageHelper.ComprarAhora</button>
+
+        </div>
+
+    </div>
+    <!-- Card -->
+
+</div>
+<!-- Card deck -->
+<!-- Central Modal Medium Info -->
+<div class="modal fade" id="membresiaEstandarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <p class="heading lead">@LanguageHelper.AdquirirMembresia</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <div class="text-center">
+                    <img src="~/Content/img/drawing.jpg" class="img-fluid" />
+                    <p class="mt-3">
+                        @LanguageHelper.ConvertirseEnMaster
+                    </p>
+
+                    <p>
+                        @LanguageHelper.ImpulsarNegocio  <span id="txtMonedaEstandar" class="data font-weight-bold" ColumnDataName="Moneda">CRC </span> <span id="txtCostoEstandar" class="data font-weight-bold" ColumnDataName="Costo"></span>
+                </p>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="modal-footer justify-content-center">
+            <div id="btnPayPalEstandar"></div>
+        </div>
+    </div>
+    <!--/.Content-->
+</div>
+</div>
+<!-- Central Modal Medium Info-->
+<!-- Central Modal Medium Info -->
+<div class="modal fade" id="membresiaEstandarAmpliarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <p class="heading lead">@LanguageHelper.ExtenderMembresia</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <div class="text-center">
+                    <img src="~/Content/img/drawing.jpg" class="img-fluid" />
+                    <p class="mt-2">
+                        @LanguageHelper.ConvertirseEnMaster
+                    </p>
+
+                    <p>@LanguageHelper.MejorarMembresia  <span id="txtMonedaEstandar" class="data font-weight-bold" ColumnDataName="Moneda">CRC </span> <span id="txtCostoEstandar" class="data font-weight-bold" ColumnDataName="Costo"></span>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer justify-content-center">
+                <div id="btnPayPalAmpliarEstandar"></div>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!-- Central Modal Medium Info-->

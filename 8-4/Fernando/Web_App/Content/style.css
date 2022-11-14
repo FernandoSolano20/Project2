@@ -1,0 +1,33 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Lalezar&display=swap');
+
+.navbar {
+    background-color: rgba(0,0,0,.2);
+}
+
+.page-footer, .top-nav-collapse {
+    background-color: #1C2331;
+}
+
+/*Style for the i components on the tables*/
+a i {
+    padding: 0.2em;
+}
+
+.brand-font {
+    font-family: 'Lalezar', cursive !important;
+}
+
+.red-border {
+    border-color: #e12a40 !important; 
+}
+
+.center-item{
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+#map {
+    width: 500px;
+    height: 300px;
+}

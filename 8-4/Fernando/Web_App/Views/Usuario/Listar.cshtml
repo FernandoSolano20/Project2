@@ -1,0 +1,33 @@
+﻿@using Web_App.AppCode.Helper.Language
+@using WebApp.Helpers
+    <script src="~/Scripts/Views/Usuario/Listar/Listar.js"></script>
+@{
+    ViewBag.Title = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--- Welcome Section -->
+<div class="container-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class=" brand-font pt-4">@LanguageHelper.TiposTrabajo</h1>
+        </div>
+
+        <hr>
+
+        <div class="col-12">
+            <p class="lead">@LanguageHelper.MantenimientoTiposTrabajoDescripcion</p>
+        </div>
+    </div>
+</div>
+
+@{
+    string columnsTitle = LanguageHelper.Identificacion + "," + LanguageHelper.Nombre + "," + LanguageHelper.PrimerApellido + "," + LanguageHelper.CorreoElectronico + "," + LanguageHelper.Estado + "," + LanguageHelper.Acciones;
+}
+
+@Html.CtrlTable(viewName: "Listar", id: "tblUsuario", title: LanguageHelper.TiposTrabajo,
+    columnsTitle: columnsTitle, ColumnsDataName: "Identificacion,Nombre,PrimerApellido,Email,Estado", onSelectFunction: "BindFields", colorHeader: "red", hasButton: false, buttonId: "", buttonType: "", buttonLabel: "", buttonFunction: "", buttonToggle: "", buttonTarget: "")
+
+@Html.CtrlModalMessage(viewName: "Listar", id: "deleteModal", modalFormId: "deleteModalMessage", title: LanguageHelper.Eliminar, text: LanguageHelper.ConfirmacionEliminar, btnActionId: "btnDelete", btnActionType: "danger", btnActionText: LanguageHelper.Eliminar, btnActionFunction: "Delete", btnCancelId: "btnDeleteCancel", btnCancelType: "light", btnCancelText: LanguageHelper.Cancelar, btnCancelFunction: "Cancel", spanId: "spanDeleteAttribute", spanClasses: "font-weight-bold", spanColumnDataName: "Nombre")
+
+@Html.CtrlModalMessage(viewName: "Listar", id: "statusModal", modalFormId: "statusModalMessage", title: LanguageHelper.ActivarDesactivar, text: LanguageHelper.ConfirmacionEstado, btnActionId: "btnStatus", btnActionType: "warning", btnActionText: LanguageHelper.ActivarDesactivar, btnActionFunction: "UpdateStatus", btnCancelId: "btnStatusCancel", btnCancelType: "light", btnCancelText: LanguageHelper.Cancelar, btnCancelFunction: "Cancel", spanId: "spanStatusAttribute", spanClasses: "font-weight-bold", spanColumnDataName: "Nombre")
+
